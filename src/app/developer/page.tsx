@@ -6,8 +6,8 @@ const DeveloperPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 text-center p-8">
       {/* Header */}
-      <div className="bg-blue-300 text-white py-6">
-        <h1 className="text-2xl font-bold">Mind Behind TaskFlow</h1>
+      <div className="py-6">
+        <h1 className="text-2xl font-bold">Mind Behind Task<span className="text-blue-700">Flow</span></h1>
       </div>
 
       {/* About Section */}
@@ -17,11 +17,10 @@ const DeveloperPage = () => {
           Hi, Im <strong>Abeera Umair</strong>, a passionate Fullstack developer specializing in Next.js,I have expertise in UI/UX design and chatbot development, 
           and I love building seamless, scalable fullstack applications.
         </p>
-      </div>
+     
 
       {/* Let's Connect Section */}
-      <div className="max-w-3xl mx-auto mt-8 bg-white shadow-md p-6 rounded-lg">
-        <h2 className="text-2xl font-semibold">Lets Connect!</h2>
+        <h2 className="text-2xl font-semibold mt-4">Lets Connect!</h2>
         <p className="mt-2 text-gray-700">Follow me on social media and stay updated on my latest projects.</p>
 
         <div className="mt-4 flex justify-center space-x-4">

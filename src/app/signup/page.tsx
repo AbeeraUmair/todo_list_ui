@@ -36,13 +36,13 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="w-96 bg-white p-6 rounded shadow-md">
-        <h2 className="text-2xl font-bold mb-4">Signup</h2>
+      <div className="w-96 bg-white p-6 rounded-lg shadow-md">
+   
         <form onSubmit={handleSignup}>
-          <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
-          <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-          <input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
-          <button type="submit" disabled={loading}>
+          <input className="p-2 border border-gray-300 rounded-lg mb-2 w-80 flex justify-self-center" type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+          <input className="p-2 border border-gray-300 rounded-lg mb-2 w-80 flex justify-self-center" type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+          <input className="p-2 border border-gray-300 rounded-lg mb-2 w-80 flex justify-self-center" type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required /><br/>
+          <button className="px-6 py-2 text-white flex justify-self-center bg-blue-600 rounded-lg" type="submit" disabled={loading}>
             {loading ? "Signing up..." : "Signup"}
           </button>
         </form>

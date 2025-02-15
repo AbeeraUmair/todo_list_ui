@@ -31,10 +31,9 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="w-96 bg-white p-6 rounded shadow-md">
-        <h2 className="text-2xl font-bold mb-4">Login</h2>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button onClick={handleLogin} disabled={loading}>
+        <input className="p-2 border border-gray-300 rounded-lg mb-2 w-80 flex justify-self-center" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input className="p-2 border border-gray-300 rounded-lg mb-2 w-80 flex justify-self-center" type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <button className="px-6 py-2 text-white flex justify-self-center bg-blue-600 rounded-lg" onClick={handleLogin} disabled={loading}>
           {loading ? "Logging in..." : "Login"}
         </button>
       </div>

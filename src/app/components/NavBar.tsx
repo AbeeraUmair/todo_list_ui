@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <Link href="/" className="text-xl font-bold">TaskFlow</Link>
+      <Link href="/" className="text-2xl font-bold">Task<span className="text-blue-950">Flow</span></Link>
       <div>
         {token ? (
           <div className="relative">
