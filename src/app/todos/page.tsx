@@ -79,7 +79,7 @@ const Todos = () => {
   if (loading) return <p className="text-center">Loading...</p>;
 
   return (
-    <div className="flex flex-col items-center mt-10">
+    <div className="flex flex-col items-center mt-10 min-h-screen">
       <h1 className="text-3xl font-bold mb-5">Your Todos</h1>
       <div className="mb-5 flex gap-3">
         <input
