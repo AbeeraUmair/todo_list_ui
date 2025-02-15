@@ -1,35 +1,58 @@
-"use client"
-import React from 'react'
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-const NavBar = () => {
-    const router = useRouter();
-  return (
-    <div>
-       {/* ✅ Navbar */}
-       <nav className="bg-blue-600 text-white py-4 shadow-md">
-        <div className="container mx-auto flex justify-between items-center px-6">
-         <Link href={"/"}><h1 className="text-2xl font-bold">TaskFlow</h1>
-         </Link> 
-         
-          <div className="space-x-4">
-            <button
-              className="px-4 py-2 bg-white text-blue-600 rounded-md hover:bg-gray-200"
-              onClick={() => router.push("/login")}
-            >
-              Login
-            </button>
-            <button
-              className="px-4 py-2 bg-white text-blue-600 rounded-md hover:bg-gray-200"
-              onClick={() => router.push("/signup")}
-            >
-              Signup
-            </button>
-          </div>
-        </div>
-      </nav>
-    </div>
-  )
-}
+"use client";
+import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
+import { logout } from "../../redux/slices/authSlice";
+import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import { useState } from "react";
+import { FaUserCircle } from "react-icons/fa";
 
-export default NavBar
+const Navbar = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const token = useSelector((state: RootState) => state.auth.token);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    localStorage.removeItem("token");
+    toast.success("Logged out successfully!");
+    router.push("/");
+  };
+
+  return (
+    <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
+      <Link href="/" className="text-xl font-bold">TaskFlow</Link>
+      <div>
+        {token ? (
+          <div className="relative">
+            <button
+              onClick={() => setShowDropdown(!showDropdown)}
+              className="bg-white text-blue-600 px-4 py-2 rounded-full border flex items-center"
+            >
+              <FaUserCircle className="text-2xl" />
+            </button>
+            {showDropdown && (
+              <div className="absolute right-0 mt-2 bg-white text-black shadow-md rounded-md">
+                <button
+                  className="block px-4 py-2 hover:bg-gray-100 w-full"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </button>
+              </div>
+            )}
+          </div>
+        ) : (
+          <>
+            <Link href="/login" className="mr-4">Login</Link>
+            <Link href="/signup" className="bg-white text-blue-600 px-4 py-2 rounded">Signup</Link>
+          </>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

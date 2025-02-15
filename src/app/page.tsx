@@ -9,8 +9,10 @@ const HomePage = () => {
     <div className="min-h-screen flex flex-col">
 
       {/* ✅ Hero Section */}
-      <header className="flex-1 flex flex-col justify-center items-center text-center p-10">
-        <h2 className="text-4xl font-bold text-gray-800">Welcome to TaskFlow</h2>
+
+      <header className="flex flex-col items-center justify-center h-screen bg-gray-100">
+      <h1 className="text-4xl font-bold mb-4">Welcome to TaskFlow</h1>
+      <p className="text-lg text-gray-700 mb-6">A simple and efficient way to manage your daily tasks.</p>
         <p className="text-lg text-gray-600 mt-4 max-w-3xl">
           This is not just another to-do list. Its a project built with <strong>dedication, passion, and countless hours</strong> 
           of hard work. From backend to frontend, every part of this app is crafted to be <strong>fast, secure, and scalable</strong>.
@@ -72,11 +74,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
-      {/* ✅ Footer */}
-      <footer className="bg-blue-600 text-white text-center py-4">
-        <p className="text-sm">© 2025 TaskFlow. Built by Abeera Umair</p>
-      </footer>
+     
     </div>
   );
 };

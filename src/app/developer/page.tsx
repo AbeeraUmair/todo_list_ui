@@ -6,7 +6,7 @@ const DeveloperPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 text-center p-8">
       {/* Header */}
-      <div className="bg-blue-600 text-white py-8">
+      <div className="bg-blue-300 text-white py-6">
         <h1 className="text-2xl font-bold">Mind Behind TaskFlow</h1>
       </div>
 

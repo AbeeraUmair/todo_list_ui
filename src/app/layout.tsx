@@ -1,7 +1,7 @@
+import Footer from "../app/components/Footer";
 import NavBar from "./components/NavBar";
 import "./globals.css";
-import Providers from "./provider"; // ✅ Import Redux wrapper
-
+import Providers from "./provider"; 
 export default function RootLayout({
   children,
 }: {
@@ -10,9 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers> {/* ✅ Wrap everything inside Providers */}
+        <Providers>
           <NavBar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
