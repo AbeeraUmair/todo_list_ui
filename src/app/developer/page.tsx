@@ -1,7 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 
 const LandingPage = () => {
   return (
@@ -40,44 +38,13 @@ const LandingPage = () => {
           View My Work
         </motion.a>
         <motion.a
-          href="mailto:aleemabeera@gmail.com"
+          href="https://www.linkedin.com/in/abeera-u-4377a8296/"
+          target="_blank"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="bg-gray-800 px-6 py-3 rounded-lg text-white font-semibold hover:bg-gray-700 transition"
         >
           Contact Me
-        </motion.a>
-      </motion.div>
-
-      {/* Social Icons */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="mt-8 flex space-x-6"
-      >
-        <motion.a
-          href="https://github.com/AbeeraUmair"
-          target="_blank"
-          whileHover={{ scale: 1.2 }}
-          className="text-4xl text-gray-400 hover:text-white transition"
-        >
-          <FaGithub />
-        </motion.a>
-        <motion.a
-          href="https://www.linkedin.com/in/abeera-u-4377a8296/"
-          target="_blank"
-          whileHover={{ scale: 1.2 }}
-          className="text-4xl text-blue-400 hover:text-blue-300 transition"
-        >
-          <FaLinkedin />
-        </motion.a>
-        <motion.a
-          href="mailto:aleemabeera@gmail.com"
-          whileHover={{ scale: 1.2 }}
-          className="text-4xl text-red-400 hover:text-red-300 transition"
-        >
-          <MdEmail />
         </motion.a>
       </motion.div>
     </div>
