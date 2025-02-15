@@ -25,7 +25,7 @@ const Signup = () => {
       dispatch(setToken(response.data.token));
       localStorage.setItem("token", response.data.token);
       toast.success("Signup successful!");
-      router.push("/todos");
+      router.push("/login");
     } catch (error) {
       console.error(error);
       toast.error("Signup failed");

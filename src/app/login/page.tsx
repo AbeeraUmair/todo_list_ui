@@ -20,7 +20,7 @@ const Login = () => {
       dispatch(setToken(response.data.token));
       localStorage.setItem("token", response.data.token);
       toast.success("Login successful!");
-      router.push("/todos");
+      router.push("/");
     } catch {
       toast.error("Login failed");
     } finally {
