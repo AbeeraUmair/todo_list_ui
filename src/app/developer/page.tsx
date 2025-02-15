@@ -24,14 +24,14 @@ const DeveloperPage = () => {
         <p className="mt-2 text-gray-700">Follow me on social media and stay updated on my latest projects.</p>
 
         <div className="mt-4 flex justify-center space-x-4">
-          <Link href="" target="_blank">
+          <Link href="https://github.com/AbeeraUmair" target="_blank">
             <FaGithub className="text-3xl text-gray-800 hover:text-black" />
           </Link>
-          <Link href="" target="_blank">
+          <Link href="https://www.linkedin.com/in/abeera-u-4377a8296/" target="_blank">
             <FaLinkedin className="text-3xl text-blue-600 hover:text-blue-700" />
           </Link>
-          <Link href="" target="_blank">
-            <FaGoogle className="text-3xl text-blue-400 hover:text-blue-500" />
+          <Link href="mailto:aleemabeera@gmail.com" target="_blank">
+            <FaGoogle className="text-3xl text-red-600 hover:text-red-700" />
           </Link>
         </div>
       </div>
