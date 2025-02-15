@@ -1,42 +1,87 @@
-import Link from "next/link";
+"use client";
+import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-const DeveloperPage = () => {
+const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 text-center p-8">
-      {/* Header */}
-      <div className="py-6">
-        <h1 className="text-2xl font-bold">Mind Behind Task<span className="text-blue-700">Flow</span></h1>
-      </div>
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+      {/* Hero Section */}
+      <motion.h1
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-5xl font-extrabold bg-blue-"
+      >
+        Mind Behind <span className="text-blue-400">TaskFlow</span>
+      </motion.h1>
 
-      {/* About Section */}
-      <div className="max-w-3xl mx-auto mt-8 bg-white shadow-md p-6 rounded-lg">
-        <h2 className="text-2xl font-semibold">About Me</h2>
-        <p className="mt-4 text-gray-700">
-          Hi, Im <strong>Abeera Umair</strong>, a passionate Fullstack developer specializing in Next.js,I have expertise in UI/UX design and chatbot development, 
-          and I love building seamless, scalable fullstack applications.
-        </p>
-     
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="mt-4 text-gray-600 text-lg max-w-2xl"
+      >
+        Hi, I m <strong className="text-black">Abeera Umair</strong>, a Fullstack
+        Developer specializing in{" "}
+        <span className="text-blue-400">Next.js</span>. I create seamless, scalable
+        web applications with a strong focus on UI/UX and chatbot development.
+      </motion.p>
 
-      {/* Let's Connect Section */}
-        <h2 className="text-2xl font-semibold mt-4">Lets Connect!</h2>
-        <p className="mt-2 text-gray-700">Follow me on social media and stay updated on my latest projects.</p>
+      {/* Buttons */}
+      <motion.div className="mt-6 flex space-x-6">
+        <motion.a
+          href="https://github.com/AbeeraUmair"
+          target="_blank"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="bg-blue-500 px-6 py-3 rounded-lg text-white font-semibold hover:bg-blue-600 transition"
+        >
+          View My Work
+        </motion.a>
+        <motion.a
+          href="mailto:aleemabeera@gmail.com"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="bg-gray-800 px-6 py-3 rounded-lg text-white font-semibold hover:bg-gray-700 transition"
+        >
+          Contact Me
+        </motion.a>
+      </motion.div>
 
-        <div className="mt-4 flex justify-center space-x-4">
-          <Link href="https://github.com/AbeeraUmair" target="_blank">
-            <FaGithub className="text-3xl text-gray-800 hover:text-black" />
-          </Link>
-          <Link href="https://www.linkedin.com/in/abeera-u-4377a8296/" target="_blank">
-            <FaLinkedin className="text-3xl text-blue-600 hover:text-blue-700" />
-          </Link>
-          <Link href="mailto:aleemabeera@gmail.com" target="_blank">
-            <MdEmail className="text-3xl text-blue-600 hover:text-blue-700" />
-          </Link>
-        </div>
-      </div>
+      {/* Social Icons */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="mt-8 flex space-x-6"
+      >
+        <motion.a
+          href="https://github.com/AbeeraUmair"
+          target="_blank"
+          whileHover={{ scale: 1.2 }}
+          className="text-4xl text-gray-400 hover:text-white transition"
+        >
+          <FaGithub />
+        </motion.a>
+        <motion.a
+          href="https://www.linkedin.com/in/abeera-u-4377a8296/"
+          target="_blank"
+          whileHover={{ scale: 1.2 }}
+          className="text-4xl text-blue-400 hover:text-blue-300 transition"
+        >
+          <FaLinkedin />
+        </motion.a>
+        <motion.a
+          href="mailto:aleemabeera@gmail.com"
+          whileHover={{ scale: 1.2 }}
+          className="text-4xl text-red-400 hover:text-red-300 transition"
+        >
+          <MdEmail />
+        </motion.a>
+      </motion.div>
     </div>
   );
 };
 
-export default DeveloperPage;
+export default LandingPage;
