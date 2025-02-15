@@ -32,7 +32,7 @@ const DeveloperPage = () => {
             <FaLinkedin className="text-3xl text-blue-600 hover:text-blue-700" />
           </Link>
           <Link href="mailto:aleemabeera@gmail.com" target="_blank">
-            <MdEmail className="text-3xl text-red-600 hover:text-red-700" />
+            <MdEmail className="text-3xl text-blue-600 hover:text-blue-700" />
           </Link>
         </div>
       </div>
