@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FaGithub, FaGoogle, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const DeveloperPage = () => {
   return (
@@ -31,7 +32,7 @@ const DeveloperPage = () => {
             <FaLinkedin className="text-3xl text-blue-600 hover:text-blue-700" />
           </Link>
           <Link href="mailto:aleemabeera@gmail.com" target="_blank">
-            <FaGoogle className="text-3xl text-red-600 hover:text-red-700" />
+            <MdEmail className="text-3xl text-red-600 hover:text-red-700" />
           </Link>
         </div>
       </div>
