@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6  bg-gray-100">
       {/* Hero Section */}
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
