@@ -20,8 +20,11 @@ const Signup = () => {
   const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    console.log("sending data :",formData);
     try {
-      const response = await axios.post("/api/signup", formData);
+      const response = await axios.post("/api/signup", formData, {
+        headers :{"Content-Type":"application/json"}
+      });
       dispatch(setToken(response.data.token));
       localStorage.setItem("token", response.data.token);
       toast.success("Signup successful!");
